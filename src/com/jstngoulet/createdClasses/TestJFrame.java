@@ -4,10 +4,15 @@
 package com.jstngoulet.createdClasses;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+import java.awt.color.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 
 /**
  * @author Justin
@@ -35,10 +40,20 @@ public class TestJFrame extends JFrame {
 		
 		NSLog("Adding a gradient to the Frame");
 		JPanel gp = new GradientPanel();
+		gp.setLayout(null);
 		gp.setBounds(0, 0, WIDTH, HEIGHT);
 		gp.repaint();
 		mainBackground.add(gp);
 		mainBackground.setVisible(true);
+		
+		NSLog("Adding the title frame");
+		JPanel titleFrame = new TitlePane("Quizzed", new Rectangle(0,0, WIDTH, HEIGHT/3));
+		titleFrame.setOpaque(true);
+		titleFrame.setBackground(Color.blue);
+		gp.add(titleFrame);
+		
+		gp.revalidate();
+		mainBackground.revalidate();
 	}
 	
 	/**

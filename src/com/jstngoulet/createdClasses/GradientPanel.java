@@ -21,11 +21,8 @@ public class GradientPanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	private static final int N = 32;
 
     public GradientPanel() {
-        this.setBorder(BorderFactory.createEmptyBorder(N, N, N, N));
         this.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
     }
 
