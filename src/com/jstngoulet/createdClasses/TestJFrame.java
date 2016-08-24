@@ -5,10 +5,7 @@ package com.jstngoulet.createdClasses;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.GridLayout;
 import java.awt.Rectangle;
-import java.awt.color.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
